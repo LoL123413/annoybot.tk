@@ -7,7 +7,7 @@ app.config["SECRET_KEY"] = "test123"
 
 @app.route("/")
 def home():
-	return render_template("index.html",discord_url="https://www.annoybot.tk")
+	return render_template("index.html",discord_url="annoybot.tk")
 
 
 if __name__ == "__main__":
