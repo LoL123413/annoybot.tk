@@ -31,7 +31,7 @@ function getJoke() {
 
     /* make the tweetBtn(.tweet-btn link) work by setting href */
     // create tweet link with joke
-    const tweetLink = `www.annoybot.tk`;
+    const tweetLink = `index`;
     // set the href
     tweetBtn.setAttribute('href', tweetLink);
   }).catch(function(error) {
