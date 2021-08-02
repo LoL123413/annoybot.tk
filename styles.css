@@ -38,6 +38,7 @@ body {
   padding: 50px 20px; /* top-bottom left-right */
   background-color: #fff;
   border-radius: 5px;
+  align-items: center;
 }
 
 /* h1 */
