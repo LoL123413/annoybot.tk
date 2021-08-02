@@ -54,7 +54,7 @@ h1 {
 .joke-text {
   font-size: 1.8rem;
   margin-bottom: 30px;
-  font-family: monospace;
+  font-family: "Trebuchet MS", Helvetica, sans-serif;
 }
 
 /* .new-joke-btn */
