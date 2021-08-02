@@ -43,6 +43,7 @@ body {
   align-items: center;
   text-align: center;
   vertical-align: middle;
+  margin: 0 auto;
 }
 
 /* h1 */
