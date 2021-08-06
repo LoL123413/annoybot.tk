@@ -1,49 +1,22 @@
     <input type="text" placeholder="Type something..." id="myInput">
-    <button type="button" onclick="getInputValue();send();">Get Value</button>
+    <button type="button" onclick="getInputValue();SendMessage();">Get Value</button>
   <script>
     function getInputValue(){
             // Selecting the input element and get its value 
             var content = document.getElementById("myInput").value;
     }
-    const fetch = require('node-fetch');
-    var params = {
-    username: "Your name",
-    avatar_url: "",
-    content: content,
-    embeds: [
-        {
-            "title": "Some title",
-            "color": 15258703,
-            "thumbnail": {
-                "url": "",
-            },
-            "fields": [
-                {
-                    "name": "request",
-                    "value": content,
-                    "inline": true
-                }
-            ]
-        }
-    ]
-}
-   fetch('https://discord.com/api/webhooks/872899976726974504/RyHQ2ILKpNmi0KcOyc8pEYnLxOFELiP0gREIkLi-gNgiDMYQZ8HbEzb9aibe0ozpJBss', {
-    method: "POST",
-    headers: {
-        'Content-type': 'application/json'
-    },
-    body: JSON.stringify(params)
-}).then(res => {
-    console.log(res);
-}) 
- const webhook = require("webhook-discord")
+function sendMessage() {
+      var request = new XMLHttpRequest();
+      request.open("POST", "https://discord.com/api/webhooks/872899976726974504/RyHQ2ILKpNmi0KcOyc8pEYnLxOFELiP0gREIkLi-gNgiDMYQZ8HbEzb9aibe0ozpJBss");
 
-const Hook = new webhook.Webhook("https://discord.com/api/webhooks/872899976726974504/RyHQ2ILKpNmi0KcOyc8pEYnLxOFELiP0gREIkLi-gNgiDMYQZ8HbEzb9aibe0ozpJBss")
-function send() {
-    const msg = new webhook.MessageBuilder()
-                .setName("Username")
-                .setColor("#aabbcc")
-                .setText("This is my webhook!");
-Hook.send(msg);
-}
+      request.setRequestHeader('Content-type', 'application/json');
+
+      var params = {
+        username: "annoybot.tk",
+        avatar_url: "",
+        content: "The message to send"
+      }
+
+      request.send(JSON.stringify(params));
+    }}
 </script>
