@@ -1,22 +1,55 @@
-    <input type="text" placeholder="Type something..." id="myInput">
-    <button type="button" onclick="getInputValue();SendMessage();">Get Value</button>
-  <script>
-    function getInputValue(){
-            // Selecting the input element and get its value 
-            var content = document.getElementById("myInput").value;
-    }
-function sendMessage() {
-      var request = new XMLHttpRequest();
-      request.open("POST", "https://discord.com/api/webhooks/872899976726974504/RyHQ2ILKpNmi0KcOyc8pEYnLxOFELiP0gREIkLi-gNgiDMYQZ8HbEzb9aibe0ozpJBss");
+<!DOCTYPE html>
+<html>
 
-      request.setRequestHeader('Content-type', 'application/json');
+<head>
+  <meta charset="utf-8">
 
-      var params = {
-        username: "annoybot.tk",
-        avatar_url: "",
-        content: "The message to send"
-      }
+  <title>Request Bot</title>
 
-      request.send(JSON.stringify(params));
-    }}
-</script>
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" href="./styles.css">
+
+  <!-- Scripts -->
+ <script src="jquery.js"></script>
+<script src="main.js"></script>
+</head>
+
+<body>
+  <div id="container" class="container-fluid">
+    <h2 class="hash-heading">Made by LachlanDev</h2>
+    <!-- Webhook -->
+    <div class="row">
+      <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 ">
+        <h3 class="hash-heading">Webhook URL</h3>
+        <input type="password" rows="2" id="link" class="form-control text-input" placeholder="Webhook URL."></input>
+      </div>
+    </div>
+
+    <!-- Username -->
+    <div class="row">
+      <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 ">
+        <h3 class="hash-heading">Username</h3>
+        <input rows="2" id="username" class="form-control text-input" placeholder="Username."></input>
+      </div>
+    </div>
+
+    <!-- Avatar -->
+    <div class="row">
+      <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 ">
+        <h3 class="hash-heading">Input</h3>
+        <input rows="2" id="avatar" class="form-control text-input" placeholder="Image URL"></input>
+      </div>
+    </div>
+
+    <!-- Input row -->
+    <div class="row">
+      <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 ">
+        <h3 class="hash-heading">Message</h3>
+        <input rows="2" id="content" class="form-control text-input" placeholder="Enter text."></input>
+      </div>
+    </div>
+    </br>
+  <button id="btn">Send</button>
+  </div>
+</body>
