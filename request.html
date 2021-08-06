@@ -1,1 +1,39 @@
-test
+    <input type="text" placeholder="Type something..." id="myInput">
+    <button type="button" onclick="getInputValue();">Get Value</button>
+  <script>
+    function getInputValue(){
+            // Selecting the input element and get its value 
+            var content = document.getElementById("myInput").value;
+    }
+    const fetch = require('node-fetch');
+    var params = {
+    username: "Your name",
+    avatar_url: "",
+    content: content,
+    embeds: [
+        {
+            "title": "Some title",
+            "color": 15258703,
+            "thumbnail": {
+                "url": "",
+            },
+            "fields": [
+                {
+                    "name": "request",
+                    "value": content,
+                    "inline": true
+                }
+            ]
+        }
+    ]
+}
+   fetch('https://discord.com/api/webhooks/872899976726974504/RyHQ2ILKpNmi0KcOyc8pEYnLxOFELiP0gREIkLi-gNgiDMYQZ8HbEzb9aibe0ozpJBss', {
+    method: "POST",
+    headers: {
+        'Content-type': 'application/json'
+    },
+    body: JSON.stringify(params)
+}).then(res => {
+    console.log(res);
+}) 
+</script>
