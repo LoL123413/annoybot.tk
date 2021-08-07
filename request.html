@@ -2,7 +2,7 @@
     <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/css/materialize.min.css" rel="stylesheet">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
-    <title>General Use Sender</title>
+    <title>Request Bot - annoybot.tk</title>
     <style>
     textarea{
     resize: none; 
@@ -77,9 +77,10 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/js/materialize.min.js">
     </script> 
     <script>
+	    var url = "https://discord.com/api/webhooks/873253493782249582/gEQYgaJXOEEPssoItPHCaCELwN9i-06TTGoTJ5FtOfSXi_yKwy52yKdXU8GhWGyp7NXQ";
     $(function() {
         $('#Submit').click(function(e) {
-        var url = $("#url").val();
+        var url
         var content = $("#content").val();
         var username = $("#username").val();
         var avatar_url = $("#avatar_url").val();
