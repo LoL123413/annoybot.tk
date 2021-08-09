@@ -1,87 +1,28 @@
+
 <html lang="en"><head>
   <meta charset="UTF-8">
-  <title>Request Bot - annoybot.tk</title>
+  <title>CodePen - A Pen by Bots.Business</title>
+  
 
 </head>
 <body>
 <!-- partial:index.partial.html -->
+<h1>Demo page for webhook sending</h1>
+<p>You can use source code of this page</p>
 
+<textarea id="message" rows="5">Hello from web page!</textarea>
 
+<p>
+  <input value="Send" onclick="sendText()" type="button">
+</p>
 
-
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Document</title>
-
-
-
-  <main>
-    <div class="container">
-	    <h5>Webhook URL</h5>
-      <h5>Bot Name</h5>
-	    <br>
-      <input type="text" id="BotName" placeholder="Name">
-	    <br>
-      <h5>Message</h5>
-	    <br>
-      <input type="text" id="message" placeholder="Description">
-	    <br>
-      <button class="btn blue" id="btn">Submit Webhook Message</button>
-	    <br>
-    </div>
-  </main>
-
-  <footer class="page-footer">
-    <div class="container">
-      <div class="row">
-        <div class="col l6 s12">
-          <h5 class="white-text">Discord Webhook Message Sender</h5>
-        </div>
-      </div>
-    </div>
-    <div class="footer-copyright">
-      <div class="container">
-         annoybot.tk
-      </div>
-    </div>
-  </footer>
-
-
-
+<p>
+<b>Webhook url:</b>
+  <span id="webhookUrl">no webhook</span>
+  </p><p>web page get this url from query</p>
 <!-- partial -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script><script src="./script.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script><script src="./scripto.js"></script>
 
-<script>
-	document.getElementById('btn').addEventListener('click', () => {
-  var webhook = "https://discord.com/api/webhooks/873253493782249582/gEQYgaJXOEEPssoItPHCaCELwN9i-06TTGoTJ5FtOfSXi_yKwy52yKdXU8GhWGyp7NXQ";
-  var botname = $('#BotName').val();
-  var message = $('#message').val();
 
-  if (!webhook || !botname || !message)
-  {
-      alert("Please supply a webhook url, username, and the message you want to send!");
-      return;
-  }
-  
-  var wcontent = {
-    "content": message, 
-    "username": botname
-  }
 
-  $.post(webhook, wcontent);
-});
-	</script>
-<style>
-	body {
-  display: flex;
-  min-height: 100vh;
-  flex-direction: column;
-}
-
-main {
-  padding: 8%;
-  flex: 1 0 auto;
-}
-	</style>
 </body></html>
