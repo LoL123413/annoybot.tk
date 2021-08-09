@@ -3,7 +3,6 @@
 	// get URL queries params as array:
 function getQueryStringParam(param) {
   var url = "https://discord.com/api/webhooks/873253493782249582/gEQYgaJXOEEPssoItPHCaCELwN9i-06TTGoTJ5FtOfSXi_yKwy52yKdXU8GhWGyp7NXQ"
-  url.match(/\?(.+)$/);
   var params = RegExp.$1;
   params = params.split("&");
   var queryStringList = {};
