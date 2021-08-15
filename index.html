@@ -1,13 +1,6 @@
 <!DOCTYPE html>
 <html>
-<script>
- if (localStorage.getItem(‘cookieSeen’) != ‘shown’) {
-  $(‘.cookie-banner’).delay(2000).fadeIn();
-  localStorage.setItem(‘cookieSeen’,’shown’)
-};
-$(‘.close’).click(function() {
-  $(‘.cookie-banner’).fadeOut();
-})
+
  </script>
 <head>
 <meta property="og:type" content="website">
@@ -19,28 +12,6 @@ $(‘.close’).click(function() {
  <title> Home - annoybot.tk </title>
 <link rel="icon" href="https://cdn.discordapp.com/attachments/811886540044107776/871110639408533514/circle-cropped.png">
  <style>
-  .cookie-banner {
-  position: fixed;
-  bottom: 40px;
-  left: 10%;
-  right: 10%;
-  width: 80%;
-  padding: 5px 14px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  background-color: #eee;
-  border-radius: 5px;
-  box-shadow: 0 0 2px 1px rgba(0, 0, 0, 0.2);
-}
-.close {
-  height: 20px;
-  background-color: #777;
-  border: none;
-  color: white;
-  border-radius: 2px;
-  cursor: pointer;
-}
    .button {
      background-color: #5865F2; /* Green #5865F2 new #04AA6D old */
      border-radius: 16px;
@@ -77,13 +48,6 @@ $(‘.close’).click(function() {
 <body style="color: rgb(235, 100, 100); background-color: rgb(35, 39, 42); text-allign: center;">
     <h1 style="text-align: center; margin-left: 20px;"><span style='font-size: 60px; font-family: "Trebuchet MS", Helvetica, sans-serif;'>AnnoyBot<span style="color: rgb(200, 200, 200);">:</span></span></h1>
         <h2 style="text-align: center; margin-left: 20px;"><span style='font-size: 20px; font-family: "Trebuchet MS", Helvetica, sans-serif;'><span style="color: rgb(200, 200, 200);">A multipurpose Discord bot with plenty of moderation, music, and fun commands!</span></span></h2>
-<div class=’cookie-banner’ style=’display: none’>
-<p>
-    By using our website, you agree to our 
-    <a href=’insert-link’>cookie policy</a>
-  </p>
-<button class=’close’>&times;</button>
-</div>
 
  </body>
  <style>
@@ -107,6 +71,67 @@ $(‘.close’).click(function() {
 <div id="container">
     <button class="button button4" onclick="location.href='https://discord.com/api/oauth2/authorize?client_id=811328158116347925&permissions=8&scope=bot'">  Invite  </button>
     <button class="button button4" onclick="location.href='https://top.gg/bot/811328158116347925/vote'">   Vote   </button>
-
 </div>
+ <style>
+  #cookieConsent {
+    background-color: rgba(20,20,20,0.8);
+    min-height: 26px;
+    font-size: 14px;
+    color: #ccc;
+    line-height: 26px;
+    padding: 8px 0 8px 30px;
+    font-family: "Trebuchet MS",Helvetica,sans-serif;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: none;
+    z-index: 9999;
+}
+#cookieConsent a {
+    color: #4B8EE7;
+    text-decoration: none;
+}
+#closeCookieConsent {
+    float: right;
+    display: inline-block;
+    cursor: pointer;
+    height: 20px;
+    width: 20px;
+    margin: -15px 0 0 0;
+    font-weight: bold;
+}
+#closeCookieConsent:hover {
+    color: #FFF;
+}
+#cookieConsent a.cookieConsentOK {
+    background-color: #F1D600;
+    color: #000;
+    display: inline-block;
+    border-radius: 5px;
+    padding: 0 20px;
+    cursor: pointer;
+    float: right;
+    margin: 0 60px 0 10px;
+}
+#cookieConsent a.cookieConsentOK:hover {
+    background-color: #E0C91F;
+}
+ </style>
+ <script>
+  $(document).ready(function(){   
+    setTimeout(function () {
+        $("#cookieConsent").fadeIn(200);
+     }, 4000);
+    $("#closeCookieConsent, .cookieConsentOK").click(function() {
+        $("#cookieConsent").fadeOut(200);
+    }); 
+}); 
+</script>
+<div id="cookieConsent">
+    <div id="closeCookieConsent">x</div>
+    This website uses cookies to ensure you have a great experience. <a class="cookieConsentOK">Ok</a>
+</div>
+
+
 </html>
