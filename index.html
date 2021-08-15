@@ -1,6 +1,14 @@
 <!DOCTYPE html>
 <html>
-
+<script>
+ if (localStorage.getItem(‘cookieSeen’) != ‘shown’) {
+  $(‘.cookie-banner’).delay(2000).fadeIn();
+  localStorage.setItem(‘cookieSeen’,’shown’)
+};
+$(‘.close’).click(function() {
+  $(‘.cookie-banner’).fadeOut();
+})
+ </script>
 <head>
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="annoybot.tk">
@@ -11,6 +19,28 @@
  <title> Home - annoybot.tk </title>
 <link rel="icon" href="https://cdn.discordapp.com/attachments/811886540044107776/871110639408533514/circle-cropped.png">
  <style>
+  .cookie-banner {
+  position: fixed;
+  bottom: 40px;
+  left: 10%;
+  right: 10%;
+  width: 80%;
+  padding: 5px 14px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #eee;
+  border-radius: 5px;
+  box-shadow: 0 0 2px 1px rgba(0, 0, 0, 0.2);
+}
+.close {
+  height: 20px;
+  background-color: #777;
+  border: none;
+  color: white;
+  border-radius: 2px;
+  cursor: pointer;
+}
    .button {
      background-color: #5865F2; /* Green #5865F2 new #04AA6D old */
      border-radius: 16px;
@@ -47,7 +77,14 @@
 <body style="color: rgb(235, 100, 100); background-color: rgb(35, 39, 42); text-allign: center;">
     <h1 style="text-align: center; margin-left: 20px;"><span style='font-size: 60px; font-family: "Trebuchet MS", Helvetica, sans-serif;'>AnnoyBot<span style="color: rgb(200, 200, 200);">:</span></span></h1>
         <h2 style="text-align: center; margin-left: 20px;"><span style='font-size: 20px; font-family: "Trebuchet MS", Helvetica, sans-serif;'><span style="color: rgb(200, 200, 200);">A multipurpose Discord bot with plenty of moderation, music, and fun commands!</span></span></h2>
-<script type="text/javascript" src="https://cookieconsent.popupsmart.com/src/js/popper.js"></script><script> window.start.init({Palette:"palette1",Mode:"floating right",Theme:"classic",Message:"This website uses cookies to collect anonymous data to help us improve our website",ButtonText:"Got it",LinkText:"",Time:"5",})</script> 
+<div class=’cookie-banner’ style=’display: none’>
+<p>
+    By using our website, you agree to our 
+    <a href=’insert-link’>cookie policy</a>
+  </p>
+<button class=’close’>&times;</button>
+</div>
+
  </body>
  <style>
  .center {
