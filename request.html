@@ -1,0 +1,9 @@
+<script src='https://github.com/jb3/webhook-discord.git'>
+const Hook = new webhook.Webhook("https://discord.com/api/webhooks/873253493782249582/gEQYgaJXOEEPssoItPHCaCELwN9i-06TTGoTJ5FtOfSXi_yKwy52yKdXU8GhWGyp7NXQ")
+function send(){
+  var hk = document.getElementById("myInput").value; 
+  Hook.info("WEBHOOK NAME","hk")
+}
+   <input type="text" placeholder="your feedback" id="myInput">
+    <button type="button" onclick="send();">send</button>
+</script>
