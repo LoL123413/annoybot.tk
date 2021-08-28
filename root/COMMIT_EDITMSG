@@ -1,0 +1,39 @@
+i uigigi
+# Please enter the commit message for your changes. Lines starting
+# with '#' will be ignored, and an empty message aborts the commit.
+#
+# On branch main
+# Your branch is up to date with 'origin/main'.
+#
+# Changes to be committed:
+#	deleted:    .github/sitemap.xml
+#	renamed:    root/.htaccess -> .htaccess
+#	deleted:    404.html
+#	deleted:    about.html
+#	deleted:    app.js
+#	deleted:    bots.html
+#	deleted:    config.json
+#	deleted:    contact.html
+#	deleted:    cookies.html
+#	deleted:    facts.html
+#	deleted:    git/sitemap.xm
+#	deleted:    git/sitemap.xml
+#	deleted:    google3b370e74f6039d2a.html
+#	deleted:    index.html
+#	deleted:    jokes.html
+#	deleted:    jquery.js
+#	deleted:    login.html
+#	deleted:    main.js
+#	deleted:    mainboi.js
+#	deleted:    netlify.toml
+#	deleted:    req.html
+#	deleted:    script.js
+#	deleted:    scripto.js
+#	deleted:    src/contact.html
+#	deleted:    src/main.css
+#	deleted:    src/main.js
+#	deleted:    style.css
+#	deleted:    styles.css
+#	deleted:    stylesheet.css
+#	deleted:    thanks.html
+#
