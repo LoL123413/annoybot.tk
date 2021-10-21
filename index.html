@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 
- </script>
+ 
 <head>
  <meta name="msvalidate.01" content="48B0CA3B078E7BB7B27340A303B7B601" />
 <meta property="og:type" content="website">
@@ -55,6 +55,18 @@
    display: inline
   }
  </style>
+ <script>
+/* To Disable Inspect Element */
+$(document).bind("contextmenu",function(e) {
+ e.preventDefault();
+});
+
+$(document).keydown(function(e){
+    if(e.which === 123){
+       return false;
+    }
+});
+</script>
 
 <div style="am">
 
